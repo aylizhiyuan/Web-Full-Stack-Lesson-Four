@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>promise</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    console.dir(Promise);
+    function runAsync(){
+        var p = new Promise(function(resolve,reject){
+            //做一些异步的操作
+            setTimeout(function(){
+                console.log('执行完毕');
+                resolve('随便什么数据');
+            },2000)
+        })
+        return p;
+    }
+    runAsync().then(function(data){
+        console.log(data);
+        //后边可以用传递过来的数据做些其他的操作.
+    })
+
+    //高级的链式操作
+    function runAsync1(){
+        var p = new Promise(function(resolve,reject){
+            //异步操作
+            setTimeout(function(){
+                console.log('异步任务1执行完成');
+                resolve('随便什么数据1');
+            },1000)
+        })
+        return p;
+    }
+    function runAsync2(){
+        var p = new Promise(function(resolve,reject){
+            //异步操作
+            setTimeout(function(){
+                console.log('异步任务2执行完成');
+                resolve('随便什么数据2');
+            },1000)
+        })
+        return p;
+    }
+    function runAsync3(){
+        var p = new Promise(function(resolve,reject){
+            //异步操作
+            setTimeout(function(){
+                console.log('异步任务3执行完毕');
+                resolve('随便什么数据3');
+            },1000)
+        })
+        return p;
+    }
+    runAsync1().then(function(data){
+        console.log(data);
+        return runAsync2();
+    }).then(function(data){
+        console.log(data);
+        return '直接返回数据';
+    }).then(function(data){
+        console.log(data);
+    })
+
+    //reject的用法
+    //then方法接收两个参数，第一个对应resolve回调，第二个对应reject回调
+    /*function getNumber(){
+        var p = new Promise(function(resolve,reject){
+            //做一些异步操作
+            setTimeout(function(){
+                var num = Math.ceil(Math.random() * 10);
+                if(num <= 5){
+                    resolve(num);
+                }else{
+                    reject('数字太大了');
+                }
+            },1000)
+        })
+        return p;
+    }
+    getNumber().then(function(data){
+        console.log('resolved');
+    },function(reason,data){
+        console.log('rejected');
+        console.log(reason);
+    })*/
+
+    // catch跟then第二个参数是一致的
+    //另外一个作用,如果在执行resolve的回调
+    //的时候代码出错了，会进到catch方法中.
+
+    //all方法提供了并行执行异步操作的能力，并且在所有的异步操作执行后
+    //才执行回调
+    //自己的代码执行完毕后，才会到then里面，all把所有异步操作的结果放入一个数组中传给最后的then
+    //也就是下面的result
+    /*Promise
+        .all([runAsync1(), runAsync2(), runAsync3()])
+        .then(function(results){
+            console.log(results);
+        });*/
+
+    //race的用法
+    //请求某个图片资源
+    function requestImg(){
+        var p = new Promise(function(resolve, reject){
+            var img = new Image();
+            img.onload = function(){
+                resolve(img);
+            }
+            img.src = 'xxxxxx';
+        });
+        return p;
+    }
+
+    //延时函数，用于给请求计时
+    function timeout(){
+        var p = new Promise(function(resolve, reject){
+            setTimeout(function(){
+                reject('图片请求超时');
+            }, 5000);
+        });
+        return p;
+    }
+
+    Promise
+        .race([requestImg(), timeout()])
+        .then(function(results){
+            console.log(results);
+        })
+        .catch(function(reason){
+            console.log(reason);
+        });
+
+    //requestImg函数会异步请求一张图片，我把地址写为"xxxxxx"，
+    // 所以肯定是无法成功请求到的。timeout函数是一个延时5秒的异步操作。
+    // 我们把这两个返回Promise对象的函数放进race，于是他俩就会赛跑，
+    // 如果5秒之内图片请求成功了，
+    // 那么遍进入then方法，执行正常的流程
+    // 如果5秒钟图片还未成功返回，那么timeout就跑赢了，则进入catch，报出“图片请求超时”的信息。
+
+
+</script>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //所谓promise,简单说就是个容器，里面保存着某个未来才会结束的事件
+    //特点：对象的状态不受外界影响，三个状态,pending,resloved,rejected
+    //一旦状态改变，就不会再变，任何时候都可以得到这个结果.
+    var promise = new Promise(function(reslove,reject){
+        //...some code
+        if(/*异步操作成功*/){
+            //将状态从pending变为resloved
+            //将结果作为参数传递出去
+            reslove(value);
+        }else{
+            //将状态pending变为rejected
+            reject(value);
+        }
+    })
+    promise.then(function(value){
+        //成功的时候的回调函数
+    },function(error){
+        //失败的时候的回调函数
+    })
+
+
+</script>

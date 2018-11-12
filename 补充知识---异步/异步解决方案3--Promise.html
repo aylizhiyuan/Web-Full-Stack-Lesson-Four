@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Promise</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //异步，推荐使用Promise来进行管理.
+    //console.dir(Promise);
+    //创建一个promise对象.
+    /*var mission1 = new Promise(function(reslove,reject){
+        //初始状态下,Promise它的状态就是pending状态
+        //比如说，我要改变Promise的状态，这时候，可以通过调用reslove函数或者是
+        //reject函数来完成状态变化
+        //reslove('我成功了'); //状态由pending ----> 成功了
+        reject('我失败了') //状态由pending ---- > 失败了
+    })*/
+    //执行promise对象对应的回调函数
+    /*mission1.then(function(value){
+        console.log(value); //成功以后执行的回调函数
+    }).catch(function(value){
+        console.log(value); //失败以后执行的回调函数
+    })*/
+
+
+    //promise的执行顺序：1.先执行promise定义的代码，2.然后执行同步代码，3.最后执行promise回调中的异步代码
+    /*var promise = new Promise(function(reslove,reject){
+        console.log('promise');
+        reslove('reslove');
+    })
+    promise.then(function(value){
+        console.log(value);
+    })
+    console.log('Hi');*/
+    //promise
+    //Hi
+    //reslove
+
+    //then方法是reslove状态调用的回调函数，成功后执行的代码.
+    var promise1 = new Promise(function(reslove,reject){
+        reslove('成功');
+    })
+    //then方法的第一个参数是调用reslove的回调函数.
+    /*promise1.then(function(value){
+        console.log(value);
+    },function(value){
+        //then方法的第二个参数是reject的回调函数
+        console.log(value);
+    }).then(function(){
+        console.log('成功2');
+    }).then(function(){
+        console.log('成功3');
+    })*/
+    //因为then放回一个新的promise对象，它可以继续调用then方法。
+
+    //链式调用then，每次then返回的都是一个新的promise对象，可以在then中调用下一个异步任务完成异步任务的连续操作。
+    /*var promise2 = new Promise(function(reslove,reject){
+        reslove('异步任务1结束');
+    })
+    var promise3 = new Promise(function(reslove,reject){
+        reslove('异步任务2结束');
+    })*/
+    /*promise2.then(function(value){
+        console.log(value);
+        return promise3;//在异步任务1的then中返回异步任务2，再进行链式调用then的时候
+        //它所调用的then是相对于promise3的.
+    }).then(function(value){
+        console.log(value);
+    })*/
+
+    var promise1 = new Promise(function(reslove,reject){
+        reject('任务1失败');
+    })
+    var promise2 = new Promise(function(reslove,reject){
+        reslove('任务2成功')
+    })
+    var promise3 = new Promise(function(reslove,reject){
+        reslove('任务3成功');
+    })
+    promise1.then(function(value){
+        console.log(value);
+        return promise2;//必须返回下一个执行的任务，否则不会执行。
+    }).then(function(value){
+        console.log(value);
+        return promise3;//必须返回下一个执行的任务，否则不会执行。
+    }).then(function(value){
+        console.log(value);
+    }).catch(function(value){
+        console.log(value);
+    })
+    //这样就解决了博客系统中不停的判断错误、不停的掉回调函数了.
+    mongo.open.then(function(err,db){
+        return db;
+    }).then(function(db){
+        return db.collection('posts');
+    }).then(function(collection){
+        return collection.insert()
+    }).then(function(result){
+        console.log(result);
+    }).catch(function(err){
+        mongo.close();
+        console.log(err);
+    })
+
+    //promise.all用来管理多个异步任务，只有都成功的情况下，任务才会reslove,其中如果有一个失败了，那么它的状态就是reject.
+    var promise1 = new Promise(function(reslove,reject){
+        reslove('任务1成功');
+    })
+    var promise2 = new Promise(function(reslove,reject){
+        reslove('任务2成功');
+    })
+    var promise3 = new Promise(function(reslove,reject){
+        reslove('任务3成功');
+    })
+    Promise.all([promise1,promise2,promise3]).then(function(result){
+        //只有三个任务都成功的时候才会执行
+        //result是三个异步任务返回的结果的数组。
+    }).catch(function(error){
+        //如果三个异步任务中，有一个失败了，那么就会执行
+        //如果三个异步任务本身有catch，那么不会调用这里。
+    })
+
+    //Promise.race也是用来管理多个异步任务的，它跟Promise.all 不同的是
+    //这几个异步任务谁先执行最终的结果就是谁，一旦有任务状态率先改变，最终的状态就是它了
+    //加载图片的异步任务
+    function requestIMG(url){
+        var p = new Promise(function(reslove,reject){
+            var image = new Image();
+            image.onload = function(){
+                reslove('图片加载成功');
+            }
+            image.src = url;
+        })
+        return p;
+    }
+    function timeout(ms){
+        var p = new Promise(function(reslove,reject){
+            setTimeout(function(){
+                reject('图片加载失败');
+            },ms)
+        })
+        return p;
+    }
+    Promise.race([requestIMG(),timeOut()]).then(function(){
+        //证明图片率先被加载成功
+    }).catch(function(){
+        //证明图片的加载超过了规定的时间，导致timeout任务率先被执行
+        //状态变成了reject
+    })
+
+
+    Promise.resolve('我要成功');
+    //等价于
+    new Promise(function(reslove,reject){
+        reslove('我要成功');
+    })
+    Promise.resolve(promise1);
+    //等价于promise1本身，原封不动的返回。
+
+    Promise.reject('我要失败');
+    //等价于
+    new Promise(function(reslove,reject){
+        reject('我要失败');
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

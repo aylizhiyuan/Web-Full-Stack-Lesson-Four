@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="eventAsync.js"></script>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function test_callback(data1, data2) {
+        console.log('this is a event 1');
+    }
+    // bind event and callback
+    var eventObj = onfire.on('test_event', test_callback);
+    var eventObj2 = onfire.on('test_event', function(data1, data2) {
+        console.log('this is a event 2');
+    });
+
+    // fire event
+    onfire.fire('test_event', 'test_data1', 'test_data2');
+
+    // cancel bind event
+    onfire.un(eventObj); // only cancel the eventObj.
+    onfire.un('test_event'); // cancel all events named `test_event`.
+    onfire.un(test_callback); // cancel all the `test_callback` functions.
+
+
+
+
+</script>

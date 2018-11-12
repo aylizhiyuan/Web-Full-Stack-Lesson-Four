@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../第二阶段---express+mongoDB企业级别开发/博客系统项目/models/post.js"></script>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //回调函数，函数作为参数，传入另外一个函数内部，我们叫回调函数。
+    //1.方式1，顺序调用
+    function 1(){}
+    function 2(){}
+    //2.方式2，回调函数方式调用
+    function 1(function2(){}){}
+    //总结：回调函数这种形式，比顺序调用，好处在于1.函数代码之间不存在冲突，不用改变任何一个函数的内部代码，可以将不同功能的代码拼接在一起，组成一个更大的功能。
+    //2.function2它能得到function1的结果，进行下一步的处理。也就是可以共享数据。
+
+    //回调函数它是异步的还是同步的？它跟异步有没有关系？
+    //同步
+    function a(b){
+        console.log(1);
+        b(); //回调函数的调用.
+    }
+    function b(){
+        console.log(2);
+    }
+    a(b);//b作为回调函数，传入a函数内部
+    //同步的回调函数通常的应用是：将运算结果返回，收集最终数据
+    //举例：博客系统里面，从数据库里读取出来的数据是通过Post.get获取的，那么在这个方法的内部接收一个回调函数，最终的数据通过回调函数的形式返回。那么我们的代码就变成了这个样子:Post.get(function(result){console.log(result)})
+
+    //异步
+    function a(b){
+        setTimeout(function(){
+            console.log(1);
+            b(); //原生带有异步的代码，或者是第三方的异步插件，把b变成异步的。
+        },1000)
+        console.log('我是任务1');
+        console.log('我是任务2');
+    }
+    function b(){
+        console.log('我是任务3');
+    }
+    a(b);
+    //异步回调函数的应用：通常是把一些比较耗时的任务作为异步任务，通常都是一些跟网络有关的操作。作为一个异步的回调函数，它总是最后执行的，总是在同步代码执行完毕后执行。
+
+    //同步和异步的区别：同步的代码是阻塞性的，当前面的代码没有执行完毕之前，是不会去往下执行的;异步的代码是非阻塞性的，它可以先绕过等待结果的时间，去执行下面的代码，等结果出来了以后，再去回过头来执行。
+    $.ajax({
+        type:'post',
+        url:'/test'
+    }).done(function(result){
+        console.log(result);//等待结果返回后，再回过头来执行console.log(result)
+    }).fail(function(error){
+        console.log(error);
+    })
+    console.log(1) //优先执行同步的代码
+    console.log(2) //优先执行同步的代码
+
+    //如果我设法将所有的代码都变成异步的，那么会有个问题！！！！
+    //在node.js中，所有的代码全是异步的，这是我们必须要考虑的一个问题！！！！
+    //异步首先时间不确定，不知道什么时候执行完毕，怎么去管理呢？
+    $.ajax({
+        //第一请求
+    })
+    $.ajax({
+        //第二个请求
+    })
+    //1.解决方案？回调函数，我们用回调函数就能解决这个问题。
+    $.ajax({
+        //请求过程1
+    }).done(function(result){
+        $.ajax({
+            //请求过程2
+        })
+    })
+    //列举数据库操作
+    mongo.open(function(db){ //1.打开数据库
+        db.collection('posts',function(collection){ //2.读取集合
+            collection.insert(data,function(result){ //3.插入操作
+                console.log(result);
+            })
+        })
+    })
+    function1(){
+        function2(){
+            function3(){
+                function4(){
+                    function5(){
+                        function6(){
+                            function7(){
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //总结：怎么管理异步代码？异步任务？
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

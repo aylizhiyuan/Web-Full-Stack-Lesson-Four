@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="eventAsync.js"></script>
+    <!--加载事件监听插件-->
+    <script src="jquery-2.0.3.js"></script>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //回调函数的解决方案===把任务2作为任务1的回调函数就可以啦。
+    /*setTimeout(function(){
+        alert('任务2');
+        setTimeout(function(){
+            alert('任务1');
+        },1000);
+    },5000);*/
+
+
+    //事件监听---任务的执行不再取决于代码的顺序，而是事件的发生。
+    //document.onclick = function(){} //键盘事件、鼠标事件、window事件
+    //加载eventAsync.js之后，全局下会有一个onfire的对象
+    /*console.log(onfire);
+    function mission1(){
+        setTimeout(function(){
+            console.log('异步任务1');
+        },1000)
+    }
+    function mission2(){
+        setTimeout(function(){
+            console.log('异步任务2');
+        },1000)
+    }
+    //新增任务3，必须要让任务3在任务1和任务2结束后，再执行
+    function mission3(){
+        setTimeout(function(){
+            console.log('异步任务3');
+        },1000)
+    }
+    onfire.on('test',mission2);
+    onfire.on('test',mission1);
+    onfire.on('test',mission3);
+    onfire.fire('test');*/
+    //on方法是用来挂载事件的，第一个参数是事件的名字，第二参数是事件对应的异步任务
+    //fire方法是将on挂载的多个事件按照挂载顺序，顺序释放，从而完成对于异步任务的一个
+    //管理。
+    //事件监听处理异步的好处：我可以随时想在什么执行，就在什么时候执行，执行的时间我说的算，代码的执行不再是根据它的书写顺序来，而是根据这个"事件"什么时候触发.
+    //在node.js中，所有的异步都是通过这种形式完成的。
+
+    //jquery中也有一个对象，可以完成类似的功能.$.callbacks()
+    console.log($.Callbacks());
+
+    var callbacks = $.Callbacks(); //创建了一个异步管理的对象
+    function mission1(){
+        setTimeout(function(){
+            console.log('异步任务1');
+        },1000)
+    }
+    function mission2(){
+        setTimeout(function(){
+            console.log('异步任务2');
+        },1000)
+    }
+    callbacks.add(mission2);
+    callbacks.add(mission1);
+    callbacks.fire();
+
+    function mission1(){
+        $.ajax({
+            //请求过程1
+        }).done(function(result){
+
+        })
+    }
+    onfire.on('one',mission1);
+    function mission2(){
+        $.ajax({
+
+        }).done(function(){
+
+        })
+    }
+    onfire.on('two',mission2);
+    function result(){
+        onfire.fire('one');
+        onfire.fire('two');
+    }
+    result();
+
+    //成功了执行成功的回调，失败了执行失败的回调
+    onfire.on('success',callback1,callback2);
+    onfire.on('error',callback3,callback4);
+    var status = 'success';
+    if(status == 'success'){
+        onfire.fire('success');
+    }else{
+        onfire.fire('error');
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

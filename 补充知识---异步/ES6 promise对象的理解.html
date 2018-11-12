@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>promise对象的理解</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    /*var promise = new Promise(function(resolve,reject){
+
+    });
+    console.log(promise);*/
+
+    //创建一个函数，返回一个promise对象
+    /*function timeout (ms){
+        return new Promise(function(resolve,reject){
+            //什么时候执行异步操作
+            setTimeout(resolve,ms,'done');
+        })
+    }
+    timeout(2000).then(function(value){
+        //异步操作后的处理结果.
+        console.log(value);
+    })*/
+
+    //执行顺序，promise先执行，一旦创建promise对象，里面的代码会立即执行
+    //然后执行hi,最后执行promise over ,then方法会等待同步代码执行完毕后执行.
+    /*var promise = new Promise(function(resolve,reject){
+        console.log('promise');
+        resolve();
+    })
+    promise.then(function(){
+        console.log('promise over');
+    })
+    console.log('Hi');*/
+
+    //异步任务的依赖
+   /* var p1 = new Promise(function(resolve,reject){
+        reject(new Error('fail'));
+    })
+    var p2 = new Promise(function(resolve,reject){
+        resolve(p1);
+    })
+    p2.then(function(){
+        console.log('resolved');
+    }).catch(function(error){
+        console.log(error);
+    })*/
+
+    //异步任务的管理
+    /*var p1 = new Promise(function(resolve,reject){
+        var a = 10;
+        if(a == 10){
+            resolve(a);
+        }else{
+            reject('a不等于10');
+        }
+    })
+    p1.then(function(value){
+        console.log(value);
+        //在成功的回调函数中返回10这个值
+        return value;
+    },function(error){
+        console.log(error);
+    }).then(function(value){
+        //在这里，依然可以得到这个10.
+        console.log(value);
+    })*/
+
+    /*var p1 = new Promise(function(resolve,reject){
+        var a = 10;
+        if(a == 10){
+            resolve(a);
+        }else{
+            reject('a不等于10');
+        }
+    })
+    var p2 = new Promise(function(resolve,reject){
+        var b = 20;
+        if(b == 20){
+            resolve(b);
+        }else{
+            reject('b不等于10');
+        }
+    })
+    p1.then(function(value){
+        //我在这里，首先验证了一下a == 10 ，随后我要验证b == 10
+        console.log(value);
+        return p2;
+    }).then(function(value){
+        //这这里，验证了一下b == 20
+        console.log(value);
+    })*/
+
+    //把代码改成异步的形式
+    /*function a(){
+        return new Promise(function(resolve,reject){
+            setTimeout(function(){
+                //resolve('任务a执行完毕');
+                resolve(b);
+            },1000)
+        })
+    }
+    function b(){
+        return new Promise(function(resolve,reject){
+            setTimeout(function(){
+                resolve('任务b执行完毕');
+            },5000)
+        })
+    }
+    b().then(function(value){
+        console.log(value);
+        return a();
+    }).then(function(value){
+        console.log(value);
+    })*/
+    //常见回调函数的写法
+    /*function mission1(){
+        //任务1的代码
+        return function mission2(){
+            //任务2的代码
+            return function mission3(){
+                //任务3的代码
+            }
+        }
+    }*/
+    //promise的写法
+    /*mission1.then(function(){
+        //任务1
+        return mission2
+    }).then(function(){
+        //任务2
+        return mission3
+    }).then(function(){
+        //任务3
+    })*/
+
+    //catch捕获错误
+    /*var p1 = new Promise(function(resolve,reject){
+         reject(new Error('我是一个错误'));
+    })*/
+    //常规做法
+    /*p1.then(function(){
+        //成功的时候
+    },function(error){
+        console.log(error);
+    })*/
+   /* p1.then(function(){
+
+    }).catch(function(error){
+        console.log(error);
+    })*/
+
+    //promise.all的用法,只要当all数组里面所有的异步任务都成功的时候，对应的那个promise
+    //才会成功，只要有一个失败了，那么它就失败了.
+    var p1 = new Promise(function(resolve,reject){
+        console.log('任务1成功');
+        resolve();
+    })
+    var p2 = new Promise(function(resolve,reject){
+        console.log('任务2失败');
+        reject();
+    })
+    var p3 = new Promise(function(resolve,reject){
+        console.log('任务3成功');
+        resolve();
+    })
+    var p = Promise.all([p1,p2,p3]);
+    p.then(function(){
+        console.log('任务结束');
+    }).catch(function(){
+        console.log('任务失败');
+    })
+
+    //promise的race用法，谁快执行谁，看谁的速度更快
+    function requestIMG(url){
+        var p = new Promise(function(resolve,reject){
+            var image = new Image();
+            image.onload = function(){
+                resolve(image);
+            }
+            image.src = url;
+        })
+        return p;
+    }
+    function timeOut(ms){
+        var p = new Promise(function(resolve,reject){
+            setTimeout(function(){
+                reject(new Error('图片加载失败'));
+            },ms)
+        })
+        return p;
+    }
+    var p = Promise.race([requestIMG(),timeOut()]);
+    p.then(function(image){
+        //图片加载成功;
+    }).catch(function(error){
+        //图片加载失败
+        console.log(error);
+    })
+
+
+
+</script>
+
+

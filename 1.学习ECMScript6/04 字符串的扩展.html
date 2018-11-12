@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //在JS内部，一个字符两个字节，对于需要4个字节存储的字符
+    //JS会认为是两个字符
+    var s = '𠮷';
+    console.log(s.length);//字符的长度.
+    //可以使用codePointAt方法，来测试一个字符是由两个字节组成,
+    //还是由四个字节组成
+    var s = '𠮷a';
+    s.codePointAt(0) //得到𠮷前两个字节
+    s.codePointAt(1) //得到𠮷后两个字节
+    s.codePointAt(2) //得到a这个字符
+    function is32Bit(c){
+        return c.codePointAt(0) > 0xFFFF;
+    }
+    is32Bit('𠮷') // true
+    is32Bit('a') //false
+
+    //formCodePoint 根据码点返回字符串
+    String.fromCodePoint(0x20BB7);//𠮷
+
+    //字符串遍历接口
+    for(let codePoint of 'foo'){
+        console.log(codePoint);
+    }
+
+    //charAt方法返回字符串给定位置的字符，该方法依然不能
+    //识别大于0xFFFF的字符
+    /*'abc'.at(0) // a
+    '𠮷'.at(0) //𠮷*/
+
+    //includes ,返回布尔值，表示是否找到了参数字符串
+    //startsWith 返回布尔值，表示参数字符串是否在源字符串的头部
+    //endsWith,表示参数字符串是否在源字符串的尾部
+    //repeat方法返回一个新的字符串，表示将原字符串重复n次
+    //padStart 用于头部补全，padEnd用于尾部补全
+
+    //字符串通常会跟变量相结合，这时候会用到模板字符串
+    `In javascript this is
+    not legal.`
+    //嵌入变量
+    var name = 'bob',time = 'today';
+    `Hello ${name},how are you ${time}?`
+
+
+
+
+
+
+
+
+
+</script>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Symbol的用法</title>
+
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //新增数据类型
+    let s1 = Symbol('bar');
+    let s2 = Symbol('foo');
+    //console.log(s1); // Symbol('bar')
+    //console.log(s2); // Symbol('foo')
+
+    //用法
+    var mySymbol = Symbol();
+    //第一种写法
+    var a = {};
+    a[mySymbol] = 'hello';
+    //第二种写法
+    var a = {
+        [mySymbol]:'hello'
+    }
+    //第三种写法
+    var a = {};
+    Object.defineProperty(a,mySymbol,{value:'hello!'});
+    //都可以得到同样的结果
+    //console.log(a[mySymbol]); // hello
+
+    //注意的点:
+    //1.不要使用点运算符来操作
+    //2.使用Symbol定义属性的时候，Symbol值必须放在方括号中
+    //3.Symbol类型还可以用于定义一组常量，保证这组常量的值都是不相等的
+    const COLOR_RED = Symbol();
+    const COLOR_GREEN = Symbol();
+    function getComplement(color){
+        switch (color){
+            case COLOR_RED:
+                return COLOR_GREEN;
+                break
+            case COLOR_GREEN:
+                return COLOR_RED;
+                break
+            default:
+                throw new Error('undefined color');
+        }
+    }
+    //???这个例子没看懂
+
+    //属性名的遍历
+
+    //使用getOwnPropertySymbols方法获取一个对象的所有的Symbol属性.
+    //返回的是一个数组结果,记录了所有的Symbol属性.
+    var obj = {};
+    var a = Symbol('a');
+    var b = Symbol('b');
+    obj[a] = 'hello';
+    obj[b] = 'world';
+    var objectSymbols = Object.getOwnPropertySymbols(obj);
+    console.log(objectSymbols);
+
+    //由于以Symbol值作为名称的属性，不会被常规方法遍历得到.
+    //我们可以利用这个特性，为对象定义一些非私有的内部方法
+    var size = Symbol('size');
+    class collection {
+        //类的初始化，将一个Symbol的属性设置为0
+        constructor (){
+            this[size] = 0;
+        }
+        add(item){
+            this[this[size]] = item;
+            this[size] ++ ;
+        }
+        static sizeOf(instance){
+            return instance[size];
+        }
+    }
+
+    //有时候，我们希望重新使用同一个Symbol值
+    //它接收一个字符串作为参数,然后搜索有没有以该参数作为名称
+    //的Symbol值,如果有就返回，没有就创建一个
+    var s1 = Symbol.for('foo');
+    var s2 = Symbol.for('foo');
+    //s1 === s2 //true
+
+
+    //Symbol.keyFor方法返回一个已登记的Symbol类型值的key
+    //也就是说使用过Symbol.for方法
+    var s1 = Symbol.for('foo');
+    Symbol.keyFor(s1); // foo
+    var s2 = Symbol('foo');
+    Symbol.keyFor(s2);//undefined
+
+    //使用Symbol.for方法实现单例模式
+    //调用一个类，任何时候返回的都是同一个实例
+    const FOO_KEY = Symbol.for('foo');
+    //可以改为
+    // const FOO_KEY = Symbol('foo');
+    function A(){
+        this.foo = 'hello';
+    }
+    if(!global[FOO_KEY]){
+        global[FOO_KEY] = new A();
+    }
+    module.exports = global[FOO_KEY];
+
+
+    //内置的Symbol值
+
+    //Symbol.hasInstance
+    //类内部的Symbol.hasInstance方法会在进行instanceof
+    //运算时候自动调用
+    class Myclass {
+        [Symbol.hasInstance](foo){
+            return foo instanceof Array;
+        }
+    }
+    [1,2,3] instanceof new Myclass()//TRUE
+
+    //对象的Symbol.isConcatSpreadable属性等于一个布尔值
+    //表示该对象使用Array.prototype.concat()时候，是否可以展开
+    let arr1 = ['c','d'];
+    ['a','b'].concat(arr1,'e');
+    arr1[Symbol.isConcatSpreadable] //undefined
+    //默认是true或者是undefined
+    let arr2 = ['c','d'];
+    arar2[Symbol.isConcatSpreadable] = false;
+    ['a','b'].concat(arr2,'e') //无法正常连接
+
+    //对于一个类来说，这个属性必须写成实例的属性
+    class A1 extends Array {
+        constructor(args){
+            super(args);
+            this[Symbol.isConcatSpreadable]= true;
+        }
+    }
+    class A2 extends Array {
+        constructor(args){
+            super(args);
+            this[Symbol.isConcatSpreadable] = false;
+        }
+    }
+    let a1 = new A1();
+    a1[0] = 3;
+    a1[1] = 4;
+    let a2 = new A2();
+    a2[0] = 5;
+    a2[1] = 6;
+    [1,2].concat(a1).concat(a2);
+    //A1可以展开，但是A2不可展开
+
+
+    //Symbol.species
+    //指向当前对象的构造函数，实例话的时候，默认会调用这个方法
+    //即使用这个属性返回的函数当做构造函数，来创造新的实例对象
+    class MyArray extends Array {
+        static get[Symbol.species](){
+            return Array;
+        }
+    }
+    //例子
+    class MyArray extends Array {
+        static get[Symbol.species](){
+            return Array;
+        }
+    }
+    var a = new MyArray(1,2,3);
+    var mapped = a.map(x=>x*x);
+    mapped instanceof MyArray //false
+    mapped instanceof Array; //true
+    //由于构造函数被替换成了Array,所以
+    //mapped对象不是MyArray的实例，而是Array的实例
+
+    //Symbol.match
+    String.prototype.match(regexp)
+    // 等同于
+    regexp[Symbol.match](this)
+
+    class MyMatcher {
+        [Symbol.match](string) {
+            return 'hello world'.indexOf(string);
+        }
+    }
+
+    'e'.match(new MyMatcher()) // 1
+
+    //Symbol.replace
+    const x = {};
+    x[Symbol.replace] = (...s) => console.log(s);
+
+    'Hello'.replace(x, 'World') // ["Hello", "World"]
+
+    //Symbol.search
+    String.prototype.search(regexp)
+    // 等同于
+    regexp[Symbol.search](this)
+
+    class MySearch {
+        constructor(value) {
+            this.value = value;
+        }
+        [Symbol.search](string) {
+            return string.indexOf(this.value);
+        }
+    }
+    'foobar'.search(new MySearch('foo')) // 0
+
+    //Symbol.split
+    class MySplitter {
+        constructor(value) {
+            this.value = value;
+        }
+        [Symbol.split](string) {
+            var index = string.indexOf(this.value);
+            if (index === -1) {
+                return string;
+            }
+            return [
+                string.substr(0, index),
+                string.substr(index + this.value.length)
+            ];
+        }
+    }
+
+    'foobar'.split(new MySplitter('foo'))
+    // ['', 'bar']
+
+    'foobar'.split(new MySplitter('bar'))
+    // ['foo', '']
+
+    'foobar'.split(new MySplitter('baz'))
+
+    //Symbol.iterator
+    class Collection {
+        *[Symbol.iterator]() {
+            let i = 0;
+            while(this[i] !== undefined) {
+                yield this[i];
+                ++i;
+            }
+        }
+    }
+
+    let myCollection = new Collection();
+    myCollection[0] = 1;
+    myCollection[1] = 2;
+
+    for(let value of myCollection) {
+        console.log(value);
+    }
+    // 1
+    // 2
+
+    //Symbol.toPrimitive
+    et obj = {
+        [Symbol.toPrimitive](hint) {
+            switch (hint) {
+                case 'number':
+                    return 123;
+                case 'string':
+                    return 'str';
+                case 'default':
+                    return 'default';
+                default:
+                    throw new Error();
+            }
+        }
+    };
+
+    2 * obj // 246
+    3 + obj // '3default'
+    obj == 'default' // true
+    String(obj) // 'str'
+
+
+    //Symbol.toStringTag
+    // 例一
+    ({[Symbol.toStringTag]: 'Foo'}.toString())
+    // "[object Foo]"
+
+    // 例二
+    class Collection {
+        get [Symbol.toStringTag]() {
+            return 'xxx';
+        }
+    }
+    var x = new Collection();
+    Object.prototype.toString.call(x) // "[object xxx]"
+
+    //Symbol.unscopables
+    // 没有 unscopables 时
+    class MyClass {
+        foo() { return 1; }
+    }
+
+    var foo = function () { return 2; };
+
+    with (MyClass.prototype) {
+        foo(); // 1
+    }
+
+    // 有 unscopables 时
+    class MyClass {
+        foo() { return 1; }
+        get [Symbol.unscopables]() {
+            return { foo: true };
+        }
+    }
+
+    var foo = function () { return 2; };
+
+    with (MyClass.prototype) {
+        foo(); // 2
+    }
+
+
+
+</script>

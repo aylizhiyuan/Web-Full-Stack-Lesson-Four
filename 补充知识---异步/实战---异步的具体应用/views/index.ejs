@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+    <script src="/jquery.js"></script>
+    <style>
+        span {
+            color:red;
+        }
+    </style>
+</head>
+<body>
+<form id="form" action="/reg" method="get">
+    <label>用户名:</label>
+    <input id="username" type="text" name="username" required placeholder="请填写用户名">
+    <span id="check">*</span><br>
+    <label>密码:</label>
+    <input type="text" name="password" required placeholder="请填写密码">
+    <span>*</span><br>
+    <input id="submit" type="submit" value="提交">
+</form>
+</body>
+</html>
+<script>
+    $(function(){
+        $('#username').blur(function(){
+            //当用户名表单失去焦点的时候，应该将用户名信息发送给服务器
+            //让服务器去检测用户名是否被占用
+            var content = $('#username').val();
+            if(content !== ''){
+                $.ajax({
+                    method:'GET',
+                    url:'/checkUsername',
+                    data:{
+                        username:content
+                    }
+                }).done(function(data){
+                    if(data.message){
+                        //有占用
+                        $('#check').html('用户名被占用了');
+                        $('#form').submit(function(e){
+                            e.preventDefault();
+                            alert('用户名被占用，请重新填写用户名');
+                        })
+                    }else{
+                        //没占用
+                        $('#check').html('√');
+                        //这里处理提交的ajax操作
+                        $('#form').submit(function(e){
+                            e.preventDefault();
+                            $.ajax({
+                                method:'GET',
+                                url:'/reg',
+                                data:$('#form').serialize()
+                            }).done(function(data){
+                                if(data.message){
+                                    alert(data.message);
+                                }
+                            })
+                        })
+                    }
+                })
+            }else{
+                alert('用户名不能为空');
+                $("#check").html('*');
+            }
+        })
+    })
+</script>
