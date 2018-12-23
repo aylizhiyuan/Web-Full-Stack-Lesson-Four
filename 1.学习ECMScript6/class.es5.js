@@ -1,5 +1,7 @@
 "use strict";
 
+
+//用babel解析的ES6里面的class的ES5源码
 var _createClass = function () {
     //target目录  props是属性对象数组
     function defineProperties(target, props) {

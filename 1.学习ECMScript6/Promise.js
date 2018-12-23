@@ -1,3 +1,4 @@
+//实现一个最简单的Promise,有状态变化和then
 //构造函数的参数是一个异步任务
 function Promise(task) {
     let that = this;//缓存this
@@ -49,7 +50,6 @@ Promise.prototype.then = function (onFulfilled, onReject) {
         that.onResolvedCallbacks.push(onFulfilled);
         that.onRejectedCallbacks.push(onReject);
     }
-
 }
 
 module.exports = Promise;

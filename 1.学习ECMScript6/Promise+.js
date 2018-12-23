@@ -1,3 +1,4 @@
+//加入链式调用的promise
 //构造函数的参数是一个异步任务
 function Promise(task) {
     let that = this;//缓存this

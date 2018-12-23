@@ -2,67 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5fbc0523-79d7-48f9-8ec2-28abd1647cfb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1.学习ECMScript6/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1.学习ECMScript6/05 函数的扩展.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1.学习ECMScript6/08 对象的扩展.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1.学习ECMScript6/Promise++.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1.学习ECMScript6/Promise+.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1.学习ECMScript6/Promise.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1.学习ECMScript6/class.es5+.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1.学习ECMScript6/class.es5.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4.学习HTTP协议/图解HTTP  黑白印刷 [（日）上野宣著][人民邮电出版社][2014.05][250页](jb51.net)(1).pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/补充知识---异步专题/1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/补充知识---异步专题/1.高阶函数.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/补充知识---异步专题/2.回调函数+事件发布.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/补充知识---异步专题/3.generator.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/补充知识---异步专题/4.async.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/补充知识---异步专题/data.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/补充知识---异步专题/template.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.学习ECMScript6/02 let 和const 的使用.html" beforeDir="false" afterPath="$PROJECT_DIR$/1.学习ECMScript6/02 let 和const 的使用.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.学习ECMScript6/04 字符串的扩展.html" beforeDir="false" afterPath="$PROJECT_DIR$/1.学习ECMScript6/04 字符串的扩展.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.学习ECMScript6/05 正则的扩展.html" beforeDir="false" afterPath="$PROJECT_DIR$/1.学习ECMScript6/06 箭头函数.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.学习ECMScript6/06 数值的扩展.html" beforeDir="false" afterPath="$PROJECT_DIR$/1.学习ECMScript6/20 自己写一个class类.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.学习ECMScript6/07 数组的扩展.html" beforeDir="false" afterPath="$PROJECT_DIR$/1.学习ECMScript6/07 数组的扩展.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.学习ECMScript6/08 函数的扩展.html" beforeDir="false" afterPath="$PROJECT_DIR$/1.学习ECMScript6/17 generator的实际应用.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.学习ECMScript6/09 对象的扩展.html" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/补充知识---Promise专题/case.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1.学习ECMScript6/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/1.学习ECMScript6/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/1.学习ECMScript6/14 Promise对象.html" beforeDir="false" afterPath="$PROJECT_DIR$/1.学习ECMScript6/14 Promise对象.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.学习ECMScript6/15 Iterator和for of循环.html" beforeDir="false" afterPath="$PROJECT_DIR$/1.学习ECMScript6/15 Promise链式调用.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/1.学习ECMScript6/16 generator函数.html" beforeDir="false" afterPath="$PROJECT_DIR$/1.学习ECMScript6/16 generator函数.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.学习ECMScript6/18 async函数.html" beforeDir="false" afterPath="$PROJECT_DIR$/1.学习ECMScript6/18 async函数.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.学习ECMScript6/20 decorator.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/6.项目实战---企业CMS开发/后期会补充的.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/补充知识---Module/1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/补充知识---Module/2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/补充知识---Module/const.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/补充知识---Module/include.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/补充知识---Module/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/补充知识---Module/module.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/补充知识---Promise/10all的使用规则.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/补充知识---Promise/1实现一个承诺.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/补充知识---Promise/2拒绝一个承诺.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/补充知识---Promise/3证明承诺只能解决一次.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/补充知识---Promise/4承诺总是异步解决的.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/补充知识---Promise/5Promise返回值的问题.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/补充知识---Promise/6Promise的链式调用.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/补充知识---Promise/7promise发生错误的时候.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/补充知识---Promise/8一个关键的规则.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/补充知识---Promise/9使用异步的捷径.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/补充知识---异步/ES6 promise对象的理解.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/补充知识---异步/eventAsync.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/补充知识---异步/eventAsync.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/补充知识---异步/jquery-2.0.3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/补充知识---异步/promiseAsync.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/补充知识---异步/promise应用实例.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/补充知识---异步/实战---异步的具体应用/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/补充知识---异步/实战---异步的具体应用/model/db.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/补充知识---异步/实战---异步的具体应用/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/补充知识---异步/实战---异步的具体应用/public/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/补充知识---异步/实战---异步的具体应用/views/index.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/补充知识---异步/异步的简单概念梳理.html" beforeDir="false" afterPath="$PROJECT_DIR$/补充知识---异步专题/异步的简单概念梳理.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/补充知识---异步/异步解决方案1--回调函数.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/补充知识---异步/异步解决方案2--事件监听.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/补充知识---异步/异步解决方案3--Promise.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1.学习ECMScript6/19 class.html" beforeDir="false" afterPath="$PROJECT_DIR$/1.学习ECMScript6/19 class.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1.学习ECMScript6/Promise++.js" beforeDir="false" afterPath="$PROJECT_DIR$/补充知识---Promise专题/Promise.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1.学习ECMScript6/Promise+.js" beforeDir="false" afterPath="$PROJECT_DIR$/1.学习ECMScript6/Promise+.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1.学习ECMScript6/Promise.js" beforeDir="false" afterPath="$PROJECT_DIR$/1.学习ECMScript6/Promise.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1.学习ECMScript6/class.es5+.js" beforeDir="false" afterPath="$PROJECT_DIR$/1.学习ECMScript6/class.es5+.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1.学习ECMScript6/class.es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/1.学习ECMScript6/class.es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/补充知识---异步专题/2.回调函数+事件发布.js" beforeDir="false" afterPath="$PROJECT_DIR$/补充知识---异步专题/2.回调函数+事件发布.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/补充知识---异步专题/异步的简单概念梳理.html" beforeDir="false" afterPath="$PROJECT_DIR$/补充知识---异步专题/异步的简单概念梳理.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -77,44 +29,47 @@
     <session id="-1708359415">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.0" value="1" />
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="138" />
-          <entry key="js" value="70" />
+          <entry key="html" value="167" />
+          <entry key="js" value="125" />
           <entry key="json" value="4" />
-          <entry key="txt" value="2" />
+          <entry key="md" value="2" />
+          <entry key="txt" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="138" />
+          <entry key="HTML" value="167" />
           <entry key="JSON" value="4" />
-          <entry key="JavaScript" value="70" />
-          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="JavaScript" value="125" />
+          <entry key="PLAIN_TEXT" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="81" />
+          <entry key="html" value="278" />
+          <entry key="js" value="538" />
           <entry key="json" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="81" />
+          <entry key="HTML" value="278" />
           <entry key="JSON" value="7" />
+          <entry key="JavaScript" value="538" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -138,16 +93,23 @@
         <option value="$PROJECT_DIR$/1.学习ECMScript6/09 对象的扩展.html" />
         <option value="$PROJECT_DIR$/1.学习ECMScript6/20 自己写一个class类.html" />
         <option value="$PROJECT_DIR$/1.学习ECMScript6/class.es5.js.html" />
-        <option value="$PROJECT_DIR$/1.学习ECMScript6/16 generator函数.html" />
         <option value="$PROJECT_DIR$/1.学习ECMScript6/17 generator的实际应用.html" />
-        <option value="$PROJECT_DIR$/1.学习ECMScript6/14 Promise对象.html" />
         <option value="$PROJECT_DIR$/1.学习ECMScript6/15 Promise链式调用.html" />
-        <option value="$PROJECT_DIR$/1.学习ECMScript6/Promise+.js" />
-        <option value="$PROJECT_DIR$/1.学习ECMScript6/Promise.js" />
-        <option value="$PROJECT_DIR$/1.学习ECMScript6/class.es5.js" />
         <option value="$PROJECT_DIR$/1.学习ECMScript6/18 async函数.html" />
         <option value="$PROJECT_DIR$/补充知识---异步专题/4.async.js" />
         <option value="$PROJECT_DIR$/补充知识---Module/load3/index.json" />
+        <option value="$PROJECT_DIR$/1.学习ECMScript6/19 class.html" />
+        <option value="$PROJECT_DIR$/1.学习ECMScript6/class.es5.js" />
+        <option value="$PROJECT_DIR$/1.学习ECMScript6/class.es5+.js" />
+        <option value="$PROJECT_DIR$/1.学习ECMScript6/16 generator函数.html" />
+        <option value="$PROJECT_DIR$/1.学习ECMScript6/14 Promise对象.html" />
+        <option value="$PROJECT_DIR$/1.学习ECMScript6/Promise.js" />
+        <option value="$PROJECT_DIR$/1.学习ECMScript6/Promise+.js" />
+        <option value="$PROJECT_DIR$/补充知识---异步专题/异步的简单概念梳理.html" />
+        <option value="$PROJECT_DIR$/补充知识---异步专题/2.回调函数+事件发布.js" />
+        <option value="$PROJECT_DIR$/补充知识---异步专题/动手实现一个Promise.js" />
+        <option value="$PROJECT_DIR$/补充知识---异步专题/5.动手实现一个Promise.js" />
+        <option value="$PROJECT_DIR$/补充知识---Promise专题/case.js" />
       </list>
     </option>
   </component>
@@ -180,8 +142,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="855" />
-    <option name="y" value="80" />
+    <option name="x" value="817" />
+    <option name="y" value="5" />
     <option name="width" value="1932" />
     <option name="height" value="1061" />
   </component>
@@ -193,6 +155,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -204,7 +167,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -215,6 +177,9 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\WEB全栈课程课件整理 2019\第二阶段全栈之路---koa基础+liunx基础+mysql基础+HTTP协议+企业级应用开发\补充知识---Promise专题" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\WEB全栈课程课件整理 2019\第二阶段全栈之路---koa基础+liunx基础+mysql基础+HTTP协议+企业级应用开发\补充知识---Module" />
       <recent name="E:\WEB全栈课程课件整理 2019\第二阶段全栈之路---koa基础+liunx基础+mysql基础+HTTP协议+企业级应用开发\补充知识---异步专题" />
@@ -243,12 +208,13 @@
       <option name="presentableId" value="Default" />
       <updated>1545458541645</updated>
       <workItem from="1545458542931" duration="3050000" />
-      <workItem from="1545467288875" duration="4798000" />
+      <workItem from="1545467288875" duration="6482000" />
+      <workItem from="1545531517898" duration="7891000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7848000" />
+    <option name="totallyTimeSpent" value="17423000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -265,7 +231,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.37785017" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -279,169 +245,13 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/1.学习ECMScript6/12 Proxy的用法.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1.学习ECMScript6/22 module后端加载.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1.学习ECMScript6/21 module的语法.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2624" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/补充知识---异步/ES6 promise对象的理解.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6649" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/补充知识---异步/eventAsync.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/补充知识---异步/eventAsync.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/补充知识---异步/promiseAsync.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2520" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/补充知识---异步/promise应用实例.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/补充知识---异步/异步解决方案1--回调函数.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1785" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/补充知识---异步/异步解决方案2--事件监听.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3150" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/补充知识---异步/异步解决方案3--Promise.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5775" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_jw-speed-201803-master.zip/201803/1.es6/9.class-es6.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1.学习ECMScript6/20 自己写一个class类.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="53" column="9" lean-forward="true" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1.学习ECMScript6/Promise.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-564">
-          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1.学习ECMScript6/Promise+.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3780">
-          <caret line="108" column="25" selection-start-line="108" selection-start-column="25" selection-end-line="108" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1.学习ECMScript6/class.es5+.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1540">
-          <caret line="42" column="9" lean-forward="true" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1.学习ECMScript6/class.es5.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1124">
-          <caret line="5" column="16" lean-forward="true" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1.学习ECMScript6/13 reflect.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-214" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1.学习ECMScript6/02 let 和const 的使用.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-175">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1.学习ECMScript6/Promise++.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1754">
-          <caret line="162" column="17" lean-forward="true" selection-start-line="162" selection-start-column="17" selection-end-line="162" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1.学习ECMScript6/15 Promise链式调用.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1400">
-          <caret line="40" column="6" lean-forward="true" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1.学习ECMScript6/19 class.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/补充知识---异步专题/1.高阶函数.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1015">
-          <caret line="29" column="20" lean-forward="true" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/补充知识---异步专题/1.txt">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1.学习ECMScript6/17 generator的实际应用.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/1.学习ECMScript6/18 async函数.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1.学习ECMScript6/16 generator函数.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1.学习ECMScript6/14 Promise对象.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="18" column="25" lean-forward="true" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -451,100 +261,193 @@
     <entry file="file://$PROJECT_DIR$/补充知识---Template/index.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/补充知识---Module/include.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5345">
-          <caret line="339" column="29" selection-start-line="339" selection-start-column="29" selection-end-line="339" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/补充知识---Module/const.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/补充知识---Module/2.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/补充知识---Module/1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/补充知识---Module/main.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/补充知识---Module/include.js" />
+    <entry file="file://$PROJECT_DIR$/补充知识---Module/const.js" />
+    <entry file="file://$PROJECT_DIR$/补充知识---Module/2.js" />
+    <entry file="file://$PROJECT_DIR$/补充知识---Module/1.js" />
+    <entry file="file://$PROJECT_DIR$/补充知识---Module/main.js" />
     <entry file="file://$PROJECT_DIR$/补充知识---Module/概念.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/补充知识---Module/load3/index.json">
+    <entry file="file://$PROJECT_DIR$/补充知识---Module/load3/index.json" />
+    <entry file="file://$PROJECT_DIR$/补充知识---Module/2.module.js" />
+    <entry file="file://$PROJECT_DIR$/补充知识---Module/1.module.js" />
+    <entry file="file://$PROJECT_DIR$/补充知识---Module/useschool2.js" />
+    <entry file="file://$PROJECT_DIR$/补充知识---Module/useschool.js" />
+    <entry file="file://$PROJECT_DIR$/补充知识---Module/user.json" />
+    <entry file="file://$PROJECT_DIR$/补充知识---Module/ul.js" />
+    <entry file="file://$PROJECT_DIR$/补充知识---Module/school.js" />
+    <entry file="file://$PROJECT_DIR$/补充知识---Module/load.js" />
+    <entry file="file://$PROJECT_DIR$/补充知识---Module/4.load2.js" />
+    <entry file="file://$PROJECT_DIR$/补充知识---Module/3.fs.js" />
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="35">
-          <caret line="1" column="8" lean-forward="true" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+          <caret line="1" column="46" lean-forward="true" selection-start-line="1" selection-start-column="46" selection-end-line="1" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/补充知识---Module/2.module.js">
+    <entry file="file://$PROJECT_DIR$/1.学习ECMScript6/08 对象的扩展.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="3" column="3" lean-forward="true" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+        <state relative-caret-position="700">
+          <caret line="32" column="11" lean-forward="true" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/补充知识---Module/1.module.js">
+    <entry file="file://$PROJECT_DIR$/1.学习ECMScript6/06 箭头函数.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="7" column="4" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        <state relative-caret-position="556">
+          <caret line="51" column="23" lean-forward="true" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.学习ECMScript6/05 函数的扩展.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="626">
+          <caret line="43" column="24" lean-forward="true" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.学习ECMScript6/04 字符串的扩展.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="556">
+          <caret line="19" column="25" lean-forward="true" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.学习ECMScript6/02 let 和const 的使用.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/BaiduNetdiskDownload/zhufeng/201812/1.es6/8.class.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-319">
+          <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.学习ECMScript6/20 自己写一个class类.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="53" column="9" lean-forward="true" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.学习ECMScript6/19 class.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2870">
+          <caret line="82" column="37" lean-forward="true" selection-start-line="82" selection-start-column="37" selection-end-line="82" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.学习ECMScript6/11 Set和Map数据结构.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3045" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.学习ECMScript6/12 Proxy的用法.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2205" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.学习ECMScript6/13 reflect.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2629" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.学习ECMScript6/17 generator的实际应用.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/补充知识---异步专题/data.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.学习ECMScript6/Promise++.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="5" column="29" selection-end-line="230" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.学习ECMScript6/16 generator函数.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="980">
+          <caret line="28" column="24" lean-forward="true" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/BaiduNetdiskDownload/zhufeng/201802/2.promise/case2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="2" column="18" lean-forward="true" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/补充知识---Promise专题/case.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="13" column="23" lean-forward="true" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/补充知识---Promise专题/Promise.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2415">
+          <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.学习ECMScript6/15 Promise链式调用.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="805">
+          <caret line="23" column="34" lean-forward="true" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.学习ECMScript6/14 Promise对象.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1645">
+          <caret line="47" column="35" lean-forward="true" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.学习ECMScript6/class.es5.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="29" column="4" lean-forward="true" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.学习ECMScript6/class.es5+.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="35">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.学习ECMScript6/Promise+.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="78" column="5" lean-forward="true" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/补充知识---Module/useschool2.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/补充知识---Module/useschool.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/补充知识---Module/user.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/补充知识---Module/ul.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/补充知识---Module/school.js">
+    <entry file="file://$PROJECT_DIR$/1.学习ECMScript6/Promise.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/补充知识---Module/load.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/补充知识---Module/4.load2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="12" column="2" lean-forward="true" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+        <state relative-caret-position="-1159">
+          <caret line="2" column="24" lean-forward="true" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/补充知识---Module/3.fs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/补充知识---异步专题/4.async.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -557,15 +460,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/补充知识---异步专题/2.回调函数+事件发布.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="91" column="20" lean-forward="true" selection-start-line="91" selection-start-column="20" selection-end-line="91" selection-end-column="20" />
+        <state relative-caret-position="1805">
+          <caret line="97" column="2" lean-forward="true" selection-start-line="97" selection-start-column="2" selection-end-line="97" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/补充知识---异步专题/4.async.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="17" column="37" lean-forward="true" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/补充知识---异步专题/异步的简单概念梳理.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1089">
-          <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+        <state relative-caret-position="-1540">
+          <caret line="14" column="12" lean-forward="true" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/补充知识---异步专题/1.高阶函数.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
         </state>
       </provider>
     </entry>

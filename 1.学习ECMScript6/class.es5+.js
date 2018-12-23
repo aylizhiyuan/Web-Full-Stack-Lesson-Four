@@ -1,5 +1,7 @@
 'use strict';
 
+
+//发生继承关系的ES5代码
 var _createClass = function () {
     function defineProperties(target, props) {
         for (var i = 0; i < props.length; i++) {

@@ -79,6 +79,8 @@ fs.readFile('./data.txt', 'utf8', function (err, data) {
     console.log(html);
   }
 }*/
+
+//简化一下，通过自定义的done函数完成事件订阅
 function render(length,cb){
   let html={};
   return function(key,value){
