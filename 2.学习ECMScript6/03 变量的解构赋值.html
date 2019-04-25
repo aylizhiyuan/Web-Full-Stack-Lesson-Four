@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变量的解构赋值</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //let a = 1;
+    //let b = 2;
+    //之前的定义是只能直接指定值
+    let [a,b,c] = [1,2,3];
+    console.log(a);
+    console.log(b);
+    console.log(c);
+    //原则：只要等号右边不是数组，(不可遍历的结构),如果进行赋值，那么将会报错.
+
+    //解构赋值允许指定默认值
+    //let [foo=true] = [];
+    //foo //true
+    //默认值生效的条件是:结果等于undfine，默认值会生效
+
+    //对象的解构赋值
+    let { foo,bar } = {foo:'aaa',bar:'bbb'};
+    console.log(foo);
+    console.log(bar);
+    //左边依然是变量，右边从数组变化成对象，跟数组不同的是，顺序不重要，并且
+    //变量必须与属性同名，才能娶到正确的值.
+
+    //实际是下面这个样纸
+    //let {foo:foo,bar:bar} = {foo:'aaa',bar:'bbb'};
+    //如果名字不一样，可以这么写
+    let {foo:baz} = {foo:'aaa',bar:'bbb'};
+    //前面的foo是模式，baz才是真正被赋值的变量。
+
+    //字符串的解构赋值
+    const [a,b,c,d,e] = 'hello';
+    console.log(a); //h
+    console.log(b);//e
+    console.log(c);
+
+
+
+
+
+
+
+
+
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let fs = require('fs');
+    function readFile(filename) {
+        return new Promise(function (resolve, reject) {
+            fs.readFile(filename, 'utf8', function (err, data) {
+                if (err)
+                    reject(err);
+                else
+                    resolve(data);
+            })
+        })
+    }
+    async function read() {
+        let template = await readFile('./template.txt');
+        let data = await readFile('./data.txt');
+        return template + '+' + data;
+    }
+    let result = read();
+    result.then(data=>console.log(data));
+</script>

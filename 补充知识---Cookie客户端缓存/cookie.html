@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //设置cookie,单个形式的设置
+    //如何设置过期时间
+    //1.获取当前的时间
+    var expries = new Date();
+    //2.设置过期时间的毫秒数
+    expries.setTime(expries.getTime() + 24 * 3600000);
+    //3.最后将它转化为UTC时区的时间,8小时之间的时间差别
+    document.cookie = "username=lzy; expires=" + expries.toUTCString();
+    document.cookie = "password=123456; path=/; domain=www.lzy.com";
+    //获取的情况下
+    document.body.innerHTML = document.cookie;
+    //删除
+    //直接将过期时间设置为负值即可.
+
+    //sessionStorage,LocalStorage
+    //设置
+    window.localStorage.setItem('name','lzy');
+    window.sessionStorage.setItem('password','123456');
+    //获取
+    window.sessionStorage.getItem('name');
+    window.localStorage.getItem('password');
+    //删除
+    window.sessionStorage.removeItem('name');
+    window.localStorage.removeItem('password');
+
+    //三个函数，封装一下cookie的操作
+    function getCookie(name){
+        //通过name值来获取cookie
+        //split 切割一下documnet.cookie，切完之后，是不是就能得到相应的name
+        var cookiename = encodeURIComponent(name) + '=';
+        var cookieStart = document.cookie.indexOf(cookiename);
+        var cookieValue = null;
+        if(cookieStart > -1){
+            var cookieEnd = document.cookie.indexOf(';',cookieStart);
+            if(cookieEnd == -1){
+                cookieEnd = document.cookie.length;
+            }
+            cookieValue = encodeURIComponent(
+                    document.cookie.substring(cookieStart + cookiename.length,cookieEnd)
+            );
+        }
+        return cookieValue;
+    }
+    //1.里面传递的参数
+    function setCookie(name,value,expires,path,domain){
+        //2.将setCookie传递过来的参数拼接成字符串.
+        var cookieText = '';
+        //3.首先，先拼接一下name=value
+        //encodeURIComponent它的用法就是为了转义特殊字符，提高安全性
+        cookieText += encodeURIComponent(name) + '=' + encodeURIComponent(value);
+        //4.拼接expires
+        if(expires instanceof Date){
+            cookieText += '; expires=' + expires;
+        }
+        //5.拼接path
+        if(path){
+            cookieText += '; path=' + path;
+        }
+        //6.拼接domain
+        if(domain){
+            cookieText += '; domain=' + domain;
+        }
+        document.cookie = cookieText;
+    }
+    function delCookie(name){
+        document.cookie = name + "= ; expires=" + new Date(0);
+    }
+
+
+
+
+
+</script>

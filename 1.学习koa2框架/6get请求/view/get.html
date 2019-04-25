@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>发送get请求方式的demo</title>
+</head>
+<body>
+<h1>发送get请求方式的demo</h1>
+<a href="http://localhost:3000/get">普通形式的GET请求</a>
+<button>ajax形式的GET请求</button>
+<p>普通形式的GET请求会刷新页面，会进行跳转;ajax这种方式不会刷新页面，也不会进行跳转,用户体验会更好。</p>
+</body>
+</html>
+<script>
+    window.onload = function(){
+        let button = document.querySelector('button');
+        button.onclick = function(event){
+            //点击button按钮的处理函数
+            //XMLHTTPRequest对象用来自定义请求
+            let xml = new XMLHttpRequest();
+            //监听onreadystatechange函数，这个函数是在请求发生状态变化的时候会主动调用的异步函数.
+            //当它的readyState值为4的时候，代表着这个请求已经被处理了
+            //这时候，可以通过xml.responseText得到从服务器端返回的值
+            xml.onreadystatechange = function(){
+                if(xml.readyState == 4){
+                    console.log(xml.responseText);
+                }
+            }
+            xml.open('GET','/get?name=lzy&age=12'); //GET请求传参只需要加在URL上就可以了。
+            //自定义的请求可以修改请求头里面的内容
+            xml.setRequestHeader('accept','text/javascript');
+            xml.send();
+        }
+    }
+</script>

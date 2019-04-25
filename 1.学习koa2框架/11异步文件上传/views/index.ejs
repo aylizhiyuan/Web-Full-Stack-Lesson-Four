@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form表单上传实例</title>
+</head>
+<body>
+<form action="/" method="post" enctype="multipart/form-data">
+    <input type="text" name="username" placeholder="填写用户名">
+    <input type="text" name="title" placeholder="填写标题">
+    <input type="file" name="uploads" multiple><!--可以传递多个文件-->
+    <input type="submit" value="上传">
+</form>
+<img src="http://localhost:3000/default-avatar.jpg">
+</body>
+</html>
+<script>
+    window.onload = function(){
+        var form = document.querySelector('form');
+        var img = document.querySelector('img');
+        form.onsubmit = function(event){
+            //屏蔽掉form表单的默认行为
+            event.preventDefault();
+            var xml = new XMLHttpRequest();
+            xml.onreadystatechange = function(){
+                if(xml.readyState == 4){
+                    let data = xml.responseText;
+                    data = JSON.parse(data);
+                    alert(data.message);
+                    console.log(data.imgSrc);
+                    img.src = data.imgSrc;
+                }
+            }
+            var data = new FormData(form);
+            xml.open('POST','/');
+            xml.send(data);
+        }
+    }
+</script>
